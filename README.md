@@ -1,33 +1,21 @@
 # portscan-ssrf
 
-Este é um script em Python que realiza um portscan em um URL específico, testando diferentes portas para uma vulnerabilidade de SSRF (Server-Side Request Forgery). O objetivo do script é identificar se o servidor alvo está respondendo a solicitações em cada porta testada.
+This is a Python script that performs a portscan on a specific URL, testing different ports for an SSRF (Server-Side Request Forgery) vulnerability. The purpose of the script is to identify whether the target server is responding to selection on each test port.
 
-Requisitos:
+Requirements:
 
-Certifique-se de ter o Python 3 instalado em seu sistema para executar este script. Além disso, você precisará instalar a biblioteca requests, que pode ser instalada via pip:
+Make sure you have Python 3 installed on your system to run this script. Additionally, you'll need to install a request library, which can be installed via pip:
 
-```
-pip install requests 
-```
+```pip install prompts```
 
-Como usar:
+How to use:
 
-Certifique-se de ter o script ```
-portscan-ssrf.py``` no seu diretório de trabalho.
-Abra o arquivo ```
-portscan-ssrf.py```
-em um editor de texto.
-Substitua "http://host/parameter=http://localhost:" pelo URL desejado, onde a parte vulnerável com a SSRF está presente.
-Execute o script usando o seguinte comando:
-```python3 portscan-ssrf.py ```
+Make sure you have the ```portscan-ssrf.py``` script in your working directory. Open the ```portscan-ssrf.py``` file in a text editor. Replace ```"http://host/parameter=http://localhost:"``` with the desired URL where the vulnerable part with SSRF is present. Run the script using the following command: python3 portscan-ssrf.py
 
-O script testará cada porta especificada na lista portas e exibirá o tamanho da resposta e o conteúdo da resposta para cada solicitação.
-Como funciona
-O script usa a biblioteca requests para enviar solicitações HTTP ao servidor alvo em diferentes portas especificadas na lista portas. Ele constrói o URL de teste substituindo o valor da porta na parte vulnerável da URL fornecida. Em seguida, envia uma solicitação GET para esse URL e exibe o tamanho e o conteúdo da resposta.
+The script will test each port specified in the list of ports and display the response size and response content for each request. How it works The script uses a requests library to send HTTP to the target server on different ports specified in the port list. He constructed the test URL by substituting the port value in the vulnerable part of the available URL. It then sends a GET request to that URL and displays the size and content of the response.
 
-Este script é um exemplo básico de como testar diferentes portas em uma vulnerabilidade SSRF. Ele pode ser personalizado de acordo com suas necessidades específicas.
+This script is a basic example of how to test different ports for an SSRF vulnerability. It can be customized according to your specific needs.
 
-Limitações:
+Limitations:
 
-Ele testa apenas as portas especificadas na lista portas. Você pode adicionar ou modificar as portas conforme necessário.
-O script não implementa medidas de segurança avançadas ou verificações adicionais. É importante considerar os riscos e implementar salvaguardas adicionais ao realizar testes de SSRF.
+It only tests the ports specified in the port list. You can add or modify ports as needed. The script does not implement advanced security measures or additional checks. It is important to consider the risks and implement additional safeguards when performing SSRF testing.
